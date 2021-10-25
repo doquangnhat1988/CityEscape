@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/Main_Scene.unity
+    guid: 2a8c4253a4bcd984aa2f0430464b36d7
+  - enabled: 1
+    path: Assets/Karting/Scenes/IntroMenu.unity
+    guid: d29260d8d84c94bd7ac95807b3da99d4
+  - enabled: 1
+    path: Assets/Karting/Scenes/MainScene.unity
+    guid: 92786e23da2af4a4f8803aaf44c47121
+  - enabled: 1
+    path: Assets/Karting/Scenes/LoseScene.unity
+    guid: 9c449e01147824b419cda406398fb2e7
+  - enabled: 1
+    path: Assets/Karting/Scenes/WinScene.unity
+    guid: d6801f2e59f75ee4b919cf5da4e48e3b
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/GamePlayCharacter.unity
+    guid: bb710d7d44a31a443962c18b04a0d563
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/Help_Scene.unity
+    guid: a2d15387517f990428345bd0883c6d34
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/Levels_Scene.unity
+    guid: 03812b47a13698d409806bb81f53d405
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/GamePlayEnv_1.unity
+    guid: 79ff5f2180c639e4ba5805a68c779d3b
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/GamePlayLighting.unity
+    guid: cd140de97f47cd741aeb9fd854999bf1
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/Lobby_Scene.unity
+    guid: 59d15542ba241e14f8b54fa9175fbaa5
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/Pause_Scene.unity
+    guid: 719b02b02dd63c44dae875fcbde7a4f0
+  - enabled: 1
+    path: Assets/CityEscape/Scenes/Quit_Scene.unity
+    guid: 89d8a9daf7b68cd4fa5bd0628e0ad898
+  m_configObjects: {}
