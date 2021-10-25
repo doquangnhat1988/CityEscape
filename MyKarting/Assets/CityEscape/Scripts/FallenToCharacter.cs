@@ -21,6 +21,7 @@ public class FallenToCharacter : MonoBehaviour
             {
                 Animator fallAnim = GetComponent<Animator>();
                 fallAnim.Play("BuildingFall");
+                isFalled = true;
             }
         }
     }
