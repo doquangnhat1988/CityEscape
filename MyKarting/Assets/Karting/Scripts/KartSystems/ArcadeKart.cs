@@ -2,11 +2,17 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.VFX;
+using UnityEngine.Events;
 
 namespace KartGame.KartSystems
 {
     public class ArcadeKart : MonoBehaviour
     {
+        [SerializeField]
+        public GameObject m_InGameMenu;
+
+        private Vector3 PositionReset = new Vector3(-48.0f,1.2f,-7.0f);
+
         [System.Serializable]
         public class StatPowerup
         {
@@ -262,6 +268,20 @@ namespace KartGame.KartSystems
                     Instantiate(NozzleVFX, nozzle, false);
                 }
             }
+
+            InGameMenuManager gameMenuManager = m_InGameMenu.GetComponent<InGameMenuManager>();
+            gameMenuManager.ResetCharacter.AddListener(ResetCharacter);
+        }
+
+        private void ResetCharacter(int checkPoint)
+        {
+            switch(checkPoint)
+            {
+                case 1:
+                    {
+                        transform.position = PositionReset;
+                    } break;
+            }
         }
 
         void AddTrailToWheel(WheelCollider wheel)
@@ -410,6 +430,16 @@ namespace KartGame.KartSystems
             {
                 if (Vector3.Dot(contact.normal, Vector3.up) > dot)
                     m_LastCollisionNormal = contact.normal;
+            }
+            
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag.Equals("Lava"))
+            {
+                Rigidbody.velocity.Set(0,0,0);
+                ResetCharacter(1);
             }
         }
 

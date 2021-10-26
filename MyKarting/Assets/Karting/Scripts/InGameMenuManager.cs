@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -18,6 +19,8 @@ public class InGameMenuManager : MonoBehaviour
 
     //PlayerInputHandler m_PlayerInputsHandler;
     FramerateCounter m_FramerateCounter;
+
+    public UnityEvent<int> ResetCharacter;
 
     void Start()
     {
@@ -50,6 +53,11 @@ public class InGameMenuManager : MonoBehaviour
 
             SetPauseMenuActivation(!menuRoot.activeSelf);
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        { 
+            ResetCharacter?.Invoke(1);
         }
 
         if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
