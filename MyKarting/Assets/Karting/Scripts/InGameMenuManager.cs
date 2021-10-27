@@ -60,6 +60,11 @@ public class InGameMenuManager : MonoBehaviour
             ResetCharacter?.Invoke(1);
         }
 
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ResetCharacter?.Invoke(2);
+        }
+
         if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
         {
             if (EventSystem.current.currentSelectedGameObject == null)

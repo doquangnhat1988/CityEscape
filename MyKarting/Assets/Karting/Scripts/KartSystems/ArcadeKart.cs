@@ -12,6 +12,7 @@ namespace KartGame.KartSystems
         public GameObject m_InGameMenu;
 
         private Vector3 PositionReset = new Vector3(-48.0f,1.2f,-7.0f);
+        private Vector3 PositionCheat = new Vector3(-3.0f, 1.2f, 64.0f);
 
         [System.Serializable]
         public class StatPowerup
@@ -280,6 +281,11 @@ namespace KartGame.KartSystems
                 case 1:
                     {
                         transform.position = PositionReset;
+                    } break;
+
+                case 2:
+                    {
+                        transform.position = PositionCheat;
                     } break;
             }
         }

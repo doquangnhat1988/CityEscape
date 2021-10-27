@@ -27,9 +27,6 @@ EditorBuildSettings:
     path: Assets/CityEscape/Scenes/Help_Scene.unity
     guid: a2d15387517f990428345bd0883c6d34
   - enabled: 1
-    path: Assets/CityEscape/Scenes/Levels_Scene.unity
-    guid: 03812b47a13698d409806bb81f53d405
-  - enabled: 1
     path: Assets/CityEscape/Scenes/GamePlayEnv_1.unity
     guid: 79ff5f2180c639e4ba5805a68c779d3b
   - enabled: 1
